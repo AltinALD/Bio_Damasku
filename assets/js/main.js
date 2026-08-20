@@ -7,7 +7,7 @@ const products = [
     category: "parfume",
     price: 2500,
     desc: "Aroma e fortë dhe e qëndrueshme – importuar nga Dubai.",
-    icon: "🧴",
+    image: "https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=700&q=80",
     badge: "Popullore",
   },
   {
@@ -16,7 +16,7 @@ const products = [
     category: "parfume",
     price: 3500,
     desc: "Parfum vajor premium me erë oud autentike.",
-    icon: "✨",
+    image: "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=700&q=80",
     badge: "Premium",
   },
   {
@@ -25,7 +25,7 @@ const products = [
     category: "hurma",
     price: 1800,
     desc: "Hurma të ëmbla dhe të zgjedhura – cilësi e lartë.",
-    icon: "🌴",
+    image: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=700&q=80",
     badge: "Të freskëta",
   },
   {
@@ -34,7 +34,7 @@ const products = [
     category: "mjalt",
     price: 1500,
     desc: "Mjaltë 100% natyrale nga lule të zgjedhura.",
-    icon: "🍯",
+    image: "https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=700&q=80",
     badge: "Natyrale",
   },
   {
@@ -43,7 +43,7 @@ const products = [
     category: "miswak",
     price: 2000,
     desc: "Pako me 10 miswak – posta falas.",
-    icon: "🌿",
+    image: "https://images.unsplash.com/photo-1466692476866-aef1dfb1e735?auto=format&fit=crop&w=700&q=80",
     badge: "Posta falas",
   },
   {
@@ -52,7 +52,7 @@ const products = [
     category: "kena",
     price: 800,
     desc: "Kena natyrale – të gjitha ngjyrat në gjendje.",
-    icon: "🎨",
+    image: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=700&q=80",
     badge: "Gjendje",
   },
   {
@@ -61,7 +61,7 @@ const products = [
     category: "vajra",
     price: 2200,
     desc: "Vaj për flokë dhe lëkurë – pastër dhe natyral.",
-    icon: "💧",
+    image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=700&q=80",
     badge: null,
   },
   {
@@ -70,7 +70,7 @@ const products = [
     category: "parfume",
     price: 4500,
     desc: "Set me 3 aroma të ndryshme për dhuratë.",
-    icon: "🎁",
+    image: "https://images.unsplash.com/photo-1588405748880-12d1d2a59db9?auto=format&fit=crop&w=700&q=80",
     badge: "Ofertë",
   },
 ];
@@ -104,7 +104,7 @@ function renderProducts() {
     <article class="product-card" data-category="${p.category}">
       <div class="product-media">
         ${p.badge ? `<span class="badge">${p.badge}</span>` : ""}
-        <span>${p.icon}</span>
+        <img src="${p.image}" alt="${p.name}" loading="lazy" />
       </div>
       <div class="product-body">
         <h3>${p.name}</h3>
@@ -147,9 +147,12 @@ function updateCartUI() {
       .map(
         (item) => `
       <div class="cart-line">
-        <strong>${item.name}</strong>
+        <img class="cart-thumb" src="${item.image}" alt="" />
+        <div class="cart-line-info">
+          <strong>${item.name}</strong>
+          <span class="qty">${item.qty} × ${formatPrice(item.price)}</span>
+        </div>
         <span class="line-price">${formatPrice(item.price * item.qty)}</span>
-        <span class="qty">${item.qty} × ${formatPrice(item.price)}</span>
       </div>
     `
       )
@@ -200,10 +203,6 @@ document.querySelectorAll(".cat-card").forEach((card) => {
   card.addEventListener("click", () => {
     const filter = card.dataset.filter;
     activeFilter = filter;
-    document.querySelectorAll(".filter-btn").forEach((b) => {
-      b.classList.toggle("active", b.dataset.filter === filter || (filter === "vajra" && b.dataset.filter === "all"));
-    });
-    // sync filter buttons – if vajra not in list, show all matching via filter
     document.querySelectorAll(".filter-btn").forEach((b) => {
       b.classList.toggle("active", b.dataset.filter === filter);
     });

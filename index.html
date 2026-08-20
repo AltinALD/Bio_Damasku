@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bio Damasku – Parfumi i natyrës</title>
+  <meta name="description" content="Produkte natyrale dhe parfume vajore nga Lindja. Bio Damasku – që nga 2004." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <!-- Top bar -->
+  <div class="topbar">
+    <span>Posta falas për porosi mbi 5000 lek</span>
+    <span>Që nga 2004 · Shqipëri</span>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <a href="#home" class="logo">
+      <span class="logo-mark">BD</span>
+      <span class="logo-text">
+        <strong>Bio Damasku</strong>
+        <small>Produkte Natyrale</small>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav">
+      <a href="#home">Kryefaqja</a>
+      <a href="#kategorite">Kategoritë</a>
+      <a href="#produkte">Produktet</a>
+      <a href="#rreth">Rreth nesh</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="cart-btn" id="cartBtn" aria-label="Shporta">
+        🛒 <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <p class="eyebrow">Parfume · Mjaltë · Hurma · Kena</p>
+      <h1>Parfumi i natyrës,<br /><em>aroma e shpirtit</em></h1>
+      <p class="hero-text">
+        Produkte natyrale dhe parfume vajore nga Lindja – të sjella në Shqipëri
+        me kujdes që nga viti <strong>2004</strong>.
+      </p>
+      <div class="hero-cta">
+        <a href="#produkte" class="btn btn-gold">Shiko produktet</a>
+        <a href="https://wa.me/355673969442" class="btn btn-outline" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>20+</strong><span>vite eksperiencë</span></div>
+        <div><strong>110k+</strong><span>ndjekës</span></div>
+        <div><strong>100%</strong><span>natyrale</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card perfume">
+        <span>✦</span>
+        <h3>Parfume Vajore</h3>
+        <p>Aroma autentike nga Dubai</p>
+      </div>
+      <div class="hero-card dates">
+        <span>◆</span>
+        <h3>Hurma Premium</h3>
+        <p>Ëmbëlsi natyrale</p>
+      </div>
+      <div class="hero-card honey">
+        <span>❖</span>
+        <h3>Mjaltë Lulesh</h3>
+        <p>Cilësi e pastër</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="section" id="kategorite">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Kategoritë</p>
+        <h2>Çfarë gjeni te ne</h2>
+      </div>
+      <div class="categories">
+        <article class="cat-card" data-filter="parfume">
+          <div class="cat-icon">🧴</div>
+          <h3>Parfume Vajore</h3>
+          <p>Parfume Dubai & attar autentik</p>
+        </article>
+        <article class="cat-card" data-filter="hurma">
+          <div class="cat-icon">🌴</div>
+          <h3>Hurma</h3>
+          <p>Hurma të zgjedhura, cilësi e lartë</p>
+        </article>
+        <article class="cat-card" data-filter="mjalt">
+          <div class="cat-icon">🍯</div>
+          <h3>Mjaltë</h3>
+          <p>Mjaltë lulesh 100% natyrale</p>
+        </article>
+        <article class="cat-card" data-filter="miswak">
+          <div class="cat-icon">🌿</div>
+          <h3>Miswak</h3>
+          <p>Shkopinj tradicionalë pastrimi</p>
+        </article>
+        <article class="cat-card" data-filter="kena">
+          <div class="cat-icon">🎨</div>
+          <h3>Kena Natyrale</h3>
+          <p>Të gjitha ngjyrat në gjendje</p>
+        </article>
+        <article class="cat-card" data-filter="vajra">
+          <div class="cat-icon">✨</div>
+          <h3>Vajra Natyrale</h3>
+          <p>Kujdes për trupin dhe flokët</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="section section-alt" id="produkte">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Dyqani</p>
+        <h2>Produktet e zgjedhura</h2>
+        <div class="filters" id="filters">
+          <button class="filter-btn active" data-filter="all">Të gjitha</button>
+          <button class="filter-btn" data-filter="parfume">Parfume</button>
+          <button class="filter-btn" data-filter="hurma">Hurma</button>
+          <button class="filter-btn" data-filter="mjalt">Mjaltë</button>
+          <button class="filter-btn" data-filter="miswak">Miswak</button>
+          <button class="filter-btn" data-filter="kena">Kena</button>
+        </div>
+      </div>
+      <div class="products" id="products"></div>
+    </div>
+  </section>
+
+  <!-- Promo -->
+  <section class="promo">
+    <div class="container promo-inner">
+      <div>
+        <p class="eyebrow">Ofertë e kufizuar</p>
+        <h2>Pako Miswak 10 copë</h2>
+        <p>Vetëm <strong>2000 lek</strong> · Posta falas</p>
+      </div>
+      <a href="https://wa.me/355673969442?text=Pershendetje!%20Dua%20pako%20Miswak%2010%20cope" class="btn btn-gold" target="_blank" rel="noopener">Porosit tani</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="rreth">
+    <div class="container about">
+      <div class="about-text">
+        <p class="eyebrow">Rreth nesh</p>
+        <h2>Bio Damasku – traditë dhe natyrë</h2>
+        <p>
+          Që nga <strong>2004</strong>, Bio Damasku sjell në Shqipëri produkte natyrale
+          dhe parfume vajore nga Lindja e Mesme. Nga parfumet e Dubait te hurmat,
+          mjalti, kena dhe miswak – çdo produkt zgjidhet me kujdes.
+        </p>
+        <ul class="about-list">
+          <li>Parfume vajore autentike</li>
+          <li>Produkte 100% natyrale</li>
+          <li>Dërgesa në të gjithë Shqipërinë</li>
+          <li>Mbështetje përmes WhatsApp</li>
+        </ul>
+      </div>
+      <div class="about-card">
+        <blockquote>
+          “Parfumi i natyrës, aroma e shpirtit.”
+        </blockquote>
+        <p>— Bio Damasku Official</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section section-alt" id="kontakt">
+    <div class="container contact">
+      <div class="section-head">
+        <p class="eyebrow">Na kontaktoni</p>
+        <h2>Porosit lehtësisht</h2>
+      </div>
+      <div class="contact-grid">
+        <a class="contact-card" href="https://wa.me/355673969442" target="_blank" rel="noopener">
+          <span>💬</span>
+          <h3>WhatsApp</h3>
+          <p>Porosi & pyetje të shpejta</p>
+        </a>
+        <a class="contact-card" href="https://instagram.com/bio.damasku_official" target="_blank" rel="noopener">
+          <span>📸</span>
+          <h3>Instagram</h3>
+          <p>@bio.damasku_official</p>
+        </a>
+        <div class="contact-card">
+          <span>📍</span>
+          <h3>Shqipëri</h3>
+          <p>Dërgesa në të gjithë vendin</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Bio Damasku</strong>
+        <p>Produkte natyrale & parfume vajore · Që nga 2004</p>
+      </div>
+      <p class="pitch-note">Demo pitch · HTML / CSS / JS</p>
+    </div>
+  </footer>
+
+  <!-- Cart drawer -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-head">
+      <h3>Shporta</h3>
+      <button id="closeCart" aria-label="Mbyll">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-foot">
+      <div class="cart-total">
+        <span>Totali</span>
+        <strong id="cartTotal">0 lek</strong>
+      </div>
+      <a id="whatsappOrder" class="btn btn-gold btn-block" href="#" target="_blank" rel="noopener">Porosit në WhatsApp</a>
+      <p class="cart-hint">Demo pitch – porosia dërgohet si mesazh.</p>
+    </div>
+  </aside>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
